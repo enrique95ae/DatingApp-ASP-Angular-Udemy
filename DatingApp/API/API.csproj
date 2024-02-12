@@ -14,4 +14,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.15" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Repositorios\DatingApp-ASP-Angular-Udemy\DatingApp\API\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Repositorios\DatingApp-ASP-Angular-Udemy\DatingApp\API\.editorconfig" />
+  </ItemGroup>
+
 </Project>
