@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "^17.2.0",
+    "@angular-devkit/schematics": "^17.2.0",
     "@angular/animations": "^16.2.12",
     "@angular/common": "^16.2.12",
     "@angular/compiler": "^16.2.12",
@@ -18,9 +20,10 @@
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
-    "@schematics/angular": "^15.0.4",
+    "@schematics/angular": "^15.2.10",
+    "bootstrap": "^5.2.3",
     "jest-editor-support": "*",
-    "ngx-bootstrap": "^6.2.0",
+    "ngx-bootstrap": "11.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
