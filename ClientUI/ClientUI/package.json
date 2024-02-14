@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
+    "@schematics/angular": "^15.0.4",
     "jest-editor-support": "*",
     "ngx-bootstrap": "^6.2.0",
     "rxjs": "~7.5.0",
