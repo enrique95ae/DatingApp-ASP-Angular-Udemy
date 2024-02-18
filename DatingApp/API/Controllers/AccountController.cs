@@ -1,6 +1,8 @@
 ﻿using API.Data;
+using API.DTOs;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -9,26 +11,38 @@ namespace API.Controllers
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;
-        public AccountController(DataContext context) { 
-            _context = context; 
+        public AccountController( DataContext context )
+        {
+            _context = context;
         }
 
-        [HttpPost("register")]
-        public async Task<ActionResult<AppUser>> Register(string pUsername, string pPassword)
+        [HttpPost( "register" )]
+        public async Task<ActionResult<AppUser>> Register( RegisterDto pRegisterDto )
         {
+
+            if ( await UserExists( pRegisterDto.UserName ) ) return BadRequest( "Username is taken" );
+            
             using var hmac = new HMACSHA512();
 
             var user = new AppUser
             {
-                UserName = pUsername,
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(pPassword)),
+                UserName = pRegisterDto.UserName.ToLower(),
+                PasswordHash = hmac.ComputeHash( Encoding.UTF8.GetBytes( pRegisterDto.Password ) ),
                 PasswordSalt = hmac.Key
             };
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            if ( !await UserExists( user.UserName ) )
+            {
+                _context.Users.Add( user );
+                await _context.SaveChangesAsync();
+            }
 
             return user;
+        }
+
+        private async Task<bool> UserExists( string pUsername )
+        {
+            return await _context.Users.AnyAsync( x => x.UserName == pUsername.ToLower() );
         }
     }
 }
