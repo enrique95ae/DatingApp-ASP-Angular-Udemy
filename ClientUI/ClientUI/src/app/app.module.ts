@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 
@@ -19,6 +20,7 @@ import { NavComponent } from './nav/nav.component'
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
 
   providers: [],
