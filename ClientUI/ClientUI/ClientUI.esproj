@@ -8,6 +8,7 @@
     <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist\ClientUI\</PublishAssetsDirectory>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\app\_models\" />
     <Folder Include="src\app\_services\" />
     <Folder Include="ssl\" />
   </ItemGroup>
