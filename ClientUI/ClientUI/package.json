@@ -24,6 +24,7 @@
     "bootstrap": "^5.2.3",
     "jest-editor-support": "*",
     "ngx-bootstrap": "^11.0.2",
+    "ngx-toastr": "^18.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
