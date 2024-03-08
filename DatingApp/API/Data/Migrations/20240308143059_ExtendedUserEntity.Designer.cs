@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240307203522_ExtendedUserEntity")]
+    [Migration("20240308143059_ExtendedUserEntity")]
     partial class ExtendedUserEntity
     {
         /// <inheritdoc />
@@ -29,7 +29,7 @@ namespace API.Data.Migrations
                     b.Property<string>("City")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Countrye")
+                    b.Property<string>("Country")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Created")

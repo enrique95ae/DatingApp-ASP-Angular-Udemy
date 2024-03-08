@@ -18,7 +18,7 @@ namespace API.Data.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Countrye",
+                name: "Country",
                 table: "Users",
                 type: "TEXT",
                 nullable: true);
@@ -113,7 +113,7 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "Countrye",
+                name: "Country",
                 table: "Users");
 
             migrationBuilder.DropColumn(
