@@ -8,6 +8,7 @@ import { Member } from '../_models/member';
 })
 export class MembersService {
   baseUrl = environment.apiUrl;
+  members: Member[] = [];
 
   constructor(private http: HttpClient) { 
 
