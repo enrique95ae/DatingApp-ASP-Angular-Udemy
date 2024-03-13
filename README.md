@@ -39,6 +39,7 @@ Angular has been my framework of choice for the frontend because of its populari
 - Customizing components' .css
 - Using ngx components
 - Consuming the API endpoints from the front end and using the data to populate the website.
+- Route Guards
 
 
 ### Dependencies
