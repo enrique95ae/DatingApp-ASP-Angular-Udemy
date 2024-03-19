@@ -43,3 +43,6 @@ Thumbs.db
 
 localhost.pem
 localhost-key.pem
+
+DatingApp/API/appsettings.json
+DatingApp/API/appsettings.development.json
