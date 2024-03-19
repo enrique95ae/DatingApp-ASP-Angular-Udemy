@@ -45,4 +45,4 @@ localhost.pem
 localhost-key.pem
 
 DatingApp/API/appsettings.json
-DatingApp/API/appsettings.development.json
+DatingApp/API/appsettings.Development.json
