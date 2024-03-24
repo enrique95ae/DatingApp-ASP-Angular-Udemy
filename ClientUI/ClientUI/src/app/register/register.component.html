@@ -14,7 +14,7 @@
 
     <app-text-input [formControl]="$any(registerForm.controls['username'])" [label]="'Username'"></app-text-input>
     <app-text-input [formControl]="$any(registerForm.controls['knownAs'])" [label]="'Known As'"></app-text-input>
-    <app-text-input [formControl]="$any(registerForm.controls['dateOfBirth'])" [label]="'Date of birth'"></app-text-input>
+    <app-date-picker [formControl]="$any(registerForm.controls['dateOfBirth'])" [label]="'Date of birth'" [maxDate]="maxDate"></app-date-picker>
     <app-text-input [formControl]="$any(registerForm.controls['city'])" [label]="'City'"></app-text-input>
     <app-text-input [formControl]="$any(registerForm.controls['country'])" [label]="'Country'"></app-text-input>
     <app-text-input [formControl]="$any(registerForm.controls['password'])" [label]="'Password'" [type]="'password'"></app-text-input>
@@ -23,6 +23,5 @@
     <div class="text-center">
             <button class="btn btn-success me-2" type="submit">Register</button>
             <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
-
     </div>
 </form>
